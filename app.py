@@ -175,6 +175,7 @@ today = date.today()
 start_date = st.sidebar.date_input(
     "Start Date",
     value=today - timedelta(days=5 * 365),
+    min_value=date(1990, 1, 1),
     max_value=today - timedelta(days=366),
 )
 end_date = st.sidebar.date_input(
