@@ -219,9 +219,10 @@ if len(tickers_input) < 2:
     input_error = "Please enter **at least 2** ticker symbols."
 elif len(tickers_input) > 5:
     input_error = "Please enter **no more than 5** ticker symbols."
+elif start_date is None or end_date is None:
+    input_error = "Please select both a start and end date."
 elif (end_date - start_date).days < 365:
     input_error = "Date range must be **at least 1 year**."
-
 # ─────────────────────────────────────────────────────────────────────────────
 # Session state
 # ─────────────────────────────────────────────────────────────────────────────
