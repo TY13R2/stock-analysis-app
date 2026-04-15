@@ -180,7 +180,6 @@ start_date = st.sidebar.date_input(
 end_date = st.sidebar.date_input(
     "End Date",
     value=today,
-    min_value=start_date + timedelta(days=366),
     max_value=today,
 )
 
